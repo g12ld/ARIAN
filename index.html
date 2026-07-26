@@ -8,12 +8,12 @@
   <meta property="og:title" content="AL ARYAN Industrial | Oil Tankers & Lowbeds">
   <meta property="og:description" content="Heavy-duty fabrication for cylindrical oil tankers, lowbed trailers, and industrial equipment in Saudi Arabia.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero-oil-tankers.jpg">
+  <meta property="og:image" content="assets/generated/hero-fabrication-workshop.png">
   <meta name="theme-color" content="#262D17">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero-oil-tankers.jpg">
+  <link rel="preload" as="image" href="assets/generated/hero-fabrication-workshop.webp" type="image/webp">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23262D17'/%3E%3Cpath d='M15 41V23h8v18h-8Zm13 0V17h8v24h-8Zm13 0V27h8v14h-8Z' fill='%23D1FE17'/%3E%3Cpath d='M12 47h40' stroke='%23BB4F1F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -167,6 +167,7 @@
 
     .section {
       position: relative;
+      scroll-margin-top: 7rem;
       padding-block: var(--section-space);
       overflow: hidden;
     }
@@ -439,7 +440,7 @@
       position: absolute;
       inset: 0;
       z-index: -3;
-      background: url("assets/hero-oil-tankers.jpg") center / cover no-repeat;
+      background: url("assets/generated/hero-fabrication-workshop.webp") center / cover no-repeat;
       filter: saturate(0.82) contrast(1.08);
       transform: scale(1.02);
     }
@@ -851,23 +852,31 @@
       display: grid;
       gap: var(--space-4);
     }
-    .client-logo {
+    .trust-tile {
       min-height: 118px;
       display: grid;
-      place-items: center;
+      align-content: space-between;
+      gap: var(--space-4);
       padding: var(--space-5);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--white-rgb) / 0.92);
+      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.06), rgb(var(--black-rgb) / 0.18));
       box-shadow: var(--shadow-card);
-      transition: transform var(--duration-normal) ease;
+      transition: transform var(--duration-normal) ease, border-color var(--duration-fast) ease;
     }
-    .client-logo:hover { transform: translateY(-4px); }
-    .client-logo img {
-      max-width: 82%;
-      max-height: 64px;
-      object-fit: contain;
-      filter: saturate(0.88) contrast(1.02);
+    .trust-tile:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-border-strong);
+    }
+    .trust-tile strong {
+      color: var(--color-lime);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+    }
+    .trust-tile span {
+      color: var(--color-muted);
+      font-size: var(--text-sm);
     }
     .testimonial-card {
       display: grid;
@@ -1269,7 +1278,7 @@
           <p class="quote-line">The brand should feel like a dependable workshop with a premium procurement desk: calm, precise, and hard to ignore.</p>
         </div>
         <figure class="media-frame is-loading reveal" data-delay="1">
-          <img src="64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg" alt="Lowbed trailer carrying fabricated cylindrical tanks outside the AL ARYAN facility" loading="lazy" decoding="async">
+          <img src="assets/generated/lowbed-tanker-yard.webp" width="1600" height="878" alt="Lowbed trailer carrying fabricated cylindrical tanks outside an industrial facility" loading="lazy" decoding="async">
           <figcaption class="media-caption">Lowbed trailer fabrication and tanker transport scope.</figcaption>
         </figure>
       </div>
@@ -1356,11 +1365,11 @@
         <div class="section-head reveal">
           <p class="eyebrow">Selected work</p>
           <h2 id="projects-title">Proof in metal, not promises.</h2>
-          <p class="lede">Real project imagery keeps the brand specific, industrial, and inspection-ready.</p>
+          <p class="lede">High-quality industrial imagery keeps the brand specific, focused, and inspection-ready.</p>
         </div>
         <div class="project-grid">
           <article class="project-card reveal">
-            <div class="project-media is-loading"><img src="WhatsApp-Image-2026-07-19-at-22.52.00-_1_.jpeg" alt="Fabricated cylindrical oil tanker body" loading="lazy" decoding="async"></div>
+            <div class="project-media is-loading"><img src="assets/generated/project-cylindrical-tankers.webp" width="1400" height="933" alt="Cylindrical oil tanker bodies inside a premium fabrication workshop" loading="lazy" decoding="async"></div>
             <div class="project-content">
               <div class="project-meta"><span class="tag">Tankers</span><span class="tag">Fleet work</span></div>
               <h3>Jubail oil tanker fleet</h3>
@@ -1368,7 +1377,7 @@
             </div>
           </article>
           <article class="project-card reveal" data-delay="1">
-            <div class="project-media is-loading"><img src="64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg" alt="Lowbed trailer carrying industrial tanks" loading="lazy" decoding="async"></div>
+            <div class="project-media is-loading"><img src="assets/generated/project-lowbed-fabrication.webp" width="1400" height="933" alt="Heavy-duty lowbed trailer chassis under fabrication" loading="lazy" decoding="async"></div>
             <div class="project-content">
               <div class="project-meta"><span class="tag">Lowbed</span><span class="tag">Transport</span></div>
               <h3>Dammam lowbed trailers</h3>
@@ -1376,7 +1385,7 @@
             </div>
           </article>
           <article class="project-card reveal" data-delay="2">
-            <div class="project-media is-loading"><img src="WhatsApp-Image-2026-07-19-at-22.52.01.jpeg" alt="Vertical cylindrical storage tanks" loading="lazy" decoding="async"></div>
+            <div class="project-media is-loading"><img src="assets/generated/project-storage-tanks.webp" width="1400" height="933" alt="Vertical cylindrical storage tanks at an industrial site" loading="lazy" decoding="async"></div>
             <div class="project-content">
               <div class="project-meta"><span class="tag">Storage</span><span class="tag">Vessels</span></div>
               <h3>Standing cylindrical tanks</h3>
@@ -1442,15 +1451,15 @@
           <h2 id="clients-title">A familiar partner for regional operators.</h2>
           <p class="lede">Designed to make credibility scannable without slowing down the path to contact.</p>
         </div>
-        <div class="client-grid" aria-label="Client logos">
-          <div class="client-logo reveal"><img src="WhatsApp-Image-2026-07-19-at-22.50.55-_1_-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal" data-delay="1"><img src="WhatsApp-Image-2026-07-19-at-22.50.56-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal" data-delay="2"><img src="WhatsApp-Image-2026-07-19-at-22.50.57-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal"><img src="WhatsApp-Image-2026-07-19-at-22.50.59-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal" data-delay="1"><img src="WhatsApp-Image-2026-07-19-at-22.51.09-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal" data-delay="2"><img src="WhatsApp-Image-2026-07-19-at-22.51.00-_1_-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal"><img src="WhatsApp-Image-2026-07-19-at-22.51.07-_1_-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
-          <div class="client-logo reveal" data-delay="1"><img src="WhatsApp-Image-2026-07-19-at-22.51.03-1.jpeg" alt="Client logo" loading="lazy" decoding="async"></div>
+        <div class="client-grid" aria-label="Industrial client segments">
+          <div class="trust-tile reveal"><strong>EPC contractors</strong><span>Fabrication scope, project packages, and urgent site needs.</span></div>
+          <div class="trust-tile reveal" data-delay="1"><strong>Oil and gas</strong><span>Tankers, process equipment, vessels, and repair support.</span></div>
+          <div class="trust-tile reveal" data-delay="2"><strong>Heavy transport</strong><span>Lowbed trailer builds, retrofits, and load-focused detailing.</span></div>
+          <div class="trust-tile reveal"><strong>Industrial operators</strong><span>Maintenance, steel structures, and production-critical equipment.</span></div>
+          <div class="trust-tile reveal" data-delay="1"><strong>Construction</strong><span>Custom bodies, support frames, skids, and site-ready fabrication.</span></div>
+          <div class="trust-tile reveal" data-delay="2"><strong>Government work</strong><span>Clear documentation, dependable timelines, and regional logistics.</span></div>
+          <div class="trust-tile reveal"><strong>Manufacturing</strong><span>Equipment support, platforms, pressure work, and practical engineering.</span></div>
+          <div class="trust-tile reveal" data-delay="1"><strong>GCC procurement</strong><span>Fast qualification for buyers comparing capability and availability.</span></div>
         </div>
       </div>
     </section>

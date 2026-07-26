@@ -1,0 +1,19 @@
+# Local design/source artifacts
+DESIGN-HANDOFF.md
+DESIGN-MANIFEST.json
+sketch-*.json
+
+# Legacy source photos are kept in Git but not needed by the live Vercel site.
+*.jpg
+*.jpeg
+*.png
+
+# Keep only the generated Open Graph PNG; the page itself uses generated WebP files.
+!assets/generated/hero-fabrication-workshop.png
+
+# Local tooling and caches
+.git
+.vercel
+node_modules
+Thumbs.db
+.DS_Store
