@@ -9,7 +9,7 @@
   <meta property="og:description" content="Heavy-duty fabrication for cylindrical oil tankers, lowbed trailers, and industrial equipment in Saudi Arabia.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/generated/hero-fabrication-workshop.png">
-  <meta name="theme-color" content="#262D17">
+  <meta name="theme-color" content="#2B2D2C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
@@ -25,7 +25,10 @@
       font-size: var(--text-body);
       line-height: 1.65;
       color: var(--color-foreground);
-      background: var(--color-background);
+      background:
+        radial-gradient(circle at 12% 4%, rgb(var(--lime-rgb) / 0.02), transparent 26rem),
+        radial-gradient(circle at 88% 12%, rgb(var(--rust-rgb) / 0.04), transparent 28rem),
+        var(--color-background);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -38,6 +41,8 @@
       --color-white: #FFFFFF;
       --color-black: #000000;
       --olive-rgb: 38 45 23;
+      --graphite-rgb: 43 45 44;
+      --graphite-soft-rgb: 54 56 54;
       --lime-rgb: 209 254 23;
       --rust-rgb: 187 79 31;
       --white-rgb: 255 255 255;
@@ -74,14 +79,14 @@
       --duration-slow: 640ms;
 
       /* Semantic tokens */
-      --color-background: var(--color-olive);
+      --color-background: rgb(var(--graphite-rgb));
       --color-foreground: var(--color-lime);
-      --color-muted: rgb(var(--lime-rgb) / 0.72);
-      --color-soft: rgb(var(--lime-rgb) / 0.1);
-      --color-card: rgb(var(--black-rgb) / 0.24);
-      --color-card-strong: rgb(var(--black-rgb) / 0.42);
-      --color-border: rgb(var(--lime-rgb) / 0.16);
-      --color-border-strong: rgb(var(--lime-rgb) / 0.34);
+      --color-muted: rgb(var(--white-rgb) / 0.72);
+      --color-soft: rgb(var(--lime-rgb) / 0.08);
+      --color-card: rgb(var(--graphite-soft-rgb) / 0.72);
+      --color-card-strong: rgb(var(--graphite-soft-rgb) / 0.92);
+      --color-border: rgb(var(--white-rgb) / 0.14);
+      --color-border-strong: rgb(var(--lime-rgb) / 0.28);
       --color-accent: var(--color-rust);
       --color-accent-soft: rgb(var(--rust-rgb) / 0.18);
       --color-ring: var(--color-lime);
@@ -244,7 +249,7 @@
       z-index: 999;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--olive-rgb) / 0.72);
+      background: rgb(var(--graphite-rgb) / 0.78);
       box-shadow: 0 18px 48px rgb(var(--black-rgb) / 0.24);
       backdrop-filter: blur(18px) saturate(1.25);
     }
@@ -322,7 +327,7 @@
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
       color: var(--color-lime);
-      background: rgb(var(--black-rgb) / 0.18);
+      background: rgb(var(--black-rgb) / 0.14);
       cursor: pointer;
     }
     .mobile-toggle svg { width: 22px; height: 22px; }
@@ -441,7 +446,7 @@
       inset: 0;
       z-index: -3;
       background: url("assets/generated/hero-fabrication-workshop.webp") center / cover no-repeat;
-      filter: saturate(0.82) contrast(1.08);
+      filter: grayscale(0.28) saturate(0.42) contrast(1.04) brightness(0.92);
       transform: scale(1.02);
     }
     .hero::after {
@@ -450,8 +455,8 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgb(var(--olive-rgb) / 0.98) 0%, rgb(var(--olive-rgb) / 0.9) 48%, rgb(var(--olive-rgb) / 0.38) 100%),
-        linear-gradient(180deg, rgb(var(--black-rgb) / 0.42) 0%, rgb(var(--olive-rgb) / 0.68) 100%);
+        linear-gradient(90deg, rgb(var(--graphite-rgb) / 0.96) 0%, rgb(var(--graphite-rgb) / 0.84) 48%, rgb(var(--graphite-rgb) / 0.3) 100%),
+        linear-gradient(180deg, rgb(var(--black-rgb) / 0.34) 0%, rgb(var(--graphite-rgb) / 0.72) 100%);
     }
     .hero-grid {
       display: grid;
@@ -468,7 +473,7 @@
       color: var(--color-lime);
     }
     .hero h1 .industrial {
-      color: rgb(var(--lime-rgb) / 0.54);
+      color: rgb(var(--white-rgb) / 0.62);
     }
     .hero .lede { max-width: 54ch; }
     .hero-actions {
@@ -488,7 +493,7 @@
       grid-template-columns: repeat(2, 1fr);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--black-rgb) / 0.22);
+      background: rgb(var(--graphite-soft-rgb) / 0.7);
       backdrop-filter: blur(16px);
       overflow: hidden;
     }
@@ -535,7 +540,7 @@
 
     .intro-band {
       padding-block: var(--space-10);
-      background: rgb(var(--black-rgb) / 0.16);
+      background: rgb(var(--black-rgb) / 0.12);
       border-block: 1px solid var(--color-border);
     }
     .intro-grid {
@@ -661,14 +666,14 @@
       overflow: hidden;
       border: 1px solid var(--color-border);
       border-radius: var(--card-radius);
-      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.06), rgb(var(--black-rgb) / 0.18)), var(--color-card);
+      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.05), rgb(var(--black-rgb) / 0.1)), var(--color-card);
       box-shadow: inset 0 1px 0 rgb(var(--white-rgb) / 0.08), var(--shadow-card);
       transition: transform var(--duration-normal) ease, border-color var(--duration-fast) ease, background var(--duration-fast) ease, box-shadow var(--duration-normal) ease;
     }
     .card:hover {
       transform: translateY(-5px);
       border-color: var(--color-border-strong);
-      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.08), rgb(var(--black-rgb) / 0.14)), var(--color-card-strong);
+      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.07), rgb(var(--black-rgb) / 0.08)), var(--color-card-strong);
     }
     .card-icon {
       width: 52px;
@@ -720,7 +725,7 @@
       padding: var(--space-6);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--black-rgb) / 0.18);
+      background: rgb(var(--graphite-soft-rgb) / 0.62);
       counter-increment: step;
     }
     .process-step::before {
@@ -783,7 +788,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgb(var(--olive-rgb) / 0.14) 0%, rgb(var(--olive-rgb) / 0.88) 100%);
+      background: linear-gradient(180deg, rgb(var(--graphite-rgb) / 0.08) 0%, rgb(var(--graphite-rgb) / 0.88) 100%);
     }
     .project-content {
       position: absolute;
@@ -815,7 +820,7 @@
       overflow-x: auto;
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--black-rgb) / 0.2);
+      background: rgb(var(--graphite-soft-rgb) / 0.64);
       box-shadow: var(--shadow-card);
     }
     table {
@@ -835,7 +840,7 @@
       font-size: var(--text-xs);
       font-weight: 700;
       text-transform: uppercase;
-      background: rgb(var(--black-rgb) / 0.26);
+      background: rgb(var(--black-rgb) / 0.18);
     }
     td { color: var(--color-muted); }
     td strong { color: var(--color-lime); }
@@ -860,7 +865,7 @@
       padding: var(--space-5);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.06), rgb(var(--black-rgb) / 0.18));
+      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.05), rgb(var(--black-rgb) / 0.08)), rgb(var(--graphite-soft-rgb) / 0.7);
       box-shadow: var(--shadow-card);
       transition: transform var(--duration-normal) ease, border-color var(--duration-fast) ease;
     }
@@ -884,7 +889,7 @@
       padding: var(--space-6);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: rgb(var(--black-rgb) / 0.2);
+      background: rgb(var(--graphite-soft-rgb) / 0.66);
       box-shadow: var(--shadow-card);
     }
     .testimonial-card blockquote {
@@ -916,7 +921,7 @@
     .dialog-panel {
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.06), rgb(var(--black-rgb) / 0.2)), var(--color-card);
+      background: linear-gradient(180deg, rgb(var(--white-rgb) / 0.05), rgb(var(--black-rgb) / 0.1)), var(--color-card);
       box-shadow: var(--shadow-card);
     }
     .contact-panel,
@@ -957,7 +962,7 @@
       min-height: var(--input-height);
       border: 1px solid var(--color-border);
       border-radius: var(--input-radius);
-      background: rgb(var(--black-rgb) / 0.18);
+      background: rgb(var(--black-rgb) / 0.16);
       color: var(--color-lime);
       outline: none;
       padding: var(--space-3) var(--space-4);
@@ -977,7 +982,7 @@
     select:focus-visible {
       border-color: var(--color-ring);
       box-shadow: 0 0 0 3px rgb(var(--lime-rgb) / 0.16);
-      background: rgb(var(--black-rgb) / 0.26);
+      background: rgb(var(--black-rgb) / 0.22);
     }
     input[aria-invalid="true"],
     textarea[aria-invalid="true"],
@@ -1009,7 +1014,7 @@
     .site-footer {
       padding-block: var(--space-16) var(--space-8);
       border-top: 1px solid var(--color-border);
-      background: rgb(var(--black-rgb) / 0.2);
+      background: rgb(var(--black-rgb) / 0.16);
     }
     .footer-grid {
       display: grid;
@@ -1068,7 +1073,7 @@
     }
     .dialog-panel {
       overflow: hidden;
-      background: var(--color-olive);
+      background: var(--color-background);
     }
     .dialog-head {
       display: flex;
