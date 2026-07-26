@@ -1144,7 +1144,7 @@
       "name": "AL ARYAN Industrial",
       "url": "https://github.com/g12ld/ARIAN",
       "telephone": "+966502433395",
-      "email": "info@alaryan-industrial.com",
+      "email": "info@alaryann.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Riyadh",
@@ -1520,7 +1520,7 @@
               </div>
               <div class="contact-item">
                 <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></span>
-                <div><strong>Email</strong><p><a href="mailto:info@alaryan-industrial.com">info@alaryan-industrial.com</a></p></div>
+                <div><strong>Email</strong><p><a href="mailto:info@alaryann.com">info@alaryann.com</a></p></div>
               </div>
             </div>
           </aside>
@@ -1560,9 +1560,9 @@
               <textarea id="message" name="message" required placeholder="Capacity, dimensions, material, quantity, site, or delivery target..." aria-describedby="message-error"></textarea>
               <span class="form-error" id="message-error" role="alert">Please add the project notes.</span>
             </div>
-            <p class="form-note">This static form prepares the inquiry locally and shows the next contact step. No information is sent to a server from this page.</p>
+            <p class="form-note">This form opens a ready email draft on your device. No information is sent to a server from this page.</p>
             <div class="hero-actions">
-              <button class="btn btn-accent" type="submit" data-submit-label="Prepare inquiry">Prepare inquiry</button>
+              <button class="btn btn-accent" type="submit" data-submit-label="Send inquiry">Send inquiry</button>
               <a class="btn" href="https://wa.me/966502433395" target="_blank" rel="noopener">Open WhatsApp</a>
             </div>
             <div class="form-status" role="status" aria-live="polite" data-form-status></div>
@@ -1601,7 +1601,7 @@
         <div class="footer-col">
           <strong>Contact</strong>
           <a href="tel:+966502433395">+966 50 243 3395</a>
-          <a href="mailto:info@alaryan-industrial.com">Email us</a>
+          <a href="mailto:info@alaryann.com">Email us</a>
           <a href="https://wa.me/966502433395" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
@@ -1654,7 +1654,7 @@
         </div>
         <div class="hero-actions">
           <a class="btn btn-accent" href="https://wa.me/966502433395" target="_blank" rel="noopener">Continue on WhatsApp</a>
-          <a class="btn" href="mailto:info@alaryan-industrial.com">Send by email</a>
+          <a class="btn" href="mailto:info@alaryann.com">Send by email</a>
         </div>
       </form>
     </div>
@@ -1719,6 +1719,38 @@
         return valid;
       }
 
+      function getFormValue(form, name) {
+        var field = form.elements[name];
+        return field ? String(field.value || "").trim() : "";
+      }
+
+      function buildMailtoLink(form) {
+        var companyEmail = "info@alaryann.com";
+        var name = getFormValue(form, "name");
+        var phone = getFormValue(form, "phone");
+        var email = getFormValue(form, "email");
+        var scope = getFormValue(form, "scope");
+        var message = getFormValue(form, "message");
+        var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
+        var body = [
+          "Hello AL ARYAN team,",
+          "",
+          "Please review this project inquiry:",
+          "",
+          "Name: " + name,
+          "Phone: " + phone,
+          "Email: " + (email || "Not provided"),
+          "Scope: " + scope,
+          "",
+          "Project notes:",
+          message,
+          "",
+          "Thank you."
+        ].join("\n");
+
+        return "mailto:" + companyEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      }
+
       if (contactForm) {
         contactForm.querySelectorAll("input, textarea, select").forEach(function (field) {
           field.addEventListener("blur", function () {
@@ -1737,15 +1769,20 @@
             return;
           }
           var button = contactForm.querySelector("button[type='submit']");
-          var original = button.getAttribute("data-submit-label") || button.textContent;
-          button.textContent = "Preparing...";
-          button.setAttribute("aria-busy", "true");
-          button.disabled = true;
+          var original = button ? button.getAttribute("data-submit-label") || button.textContent : "";
+          if (button) {
+            button.textContent = "Opening email...";
+            button.setAttribute("aria-busy", "true");
+            button.disabled = true;
+          }
+          if (formStatus) formStatus.textContent = "Opening a ready email message to info@alaryann.com.";
+          window.location.href = buildMailtoLink(contactForm);
           window.setTimeout(function () {
-            if (formStatus) formStatus.textContent = "Inquiry ready. Use WhatsApp or email to send it to AL ARYAN.";
-            button.textContent = original;
-            button.removeAttribute("aria-busy");
-            button.disabled = false;
+            if (button) {
+              button.textContent = original;
+              button.removeAttribute("aria-busy");
+              button.disabled = false;
+            }
           }, 700);
         });
       }

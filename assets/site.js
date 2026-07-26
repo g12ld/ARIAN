@@ -8,6 +8,7 @@
   var progress = document.querySelector("[data-progress]");
   var contactForm = document.querySelector("[data-contact-form]");
   var formStatus = document.querySelector("[data-form-status]");
+  var companyEmail = "info@alaryann.com";
 
   function closeMenu() {
     if (!menuButton || !mobilePanel) return;
@@ -69,6 +70,37 @@
     return valid;
   }
 
+  function getFormValue(form, name) {
+    var field = form.elements[name];
+    return field ? String(field.value || "").trim() : "";
+  }
+
+  function buildMailtoLink(form) {
+    var name = getFormValue(form, "name");
+    var phone = getFormValue(form, "phone");
+    var email = getFormValue(form, "email");
+    var scope = getFormValue(form, "scope");
+    var message = getFormValue(form, "message");
+    var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
+    var body = [
+      "Hello AL ARYAN team,",
+      "",
+      "Please review this project inquiry:",
+      "",
+      "Name: " + name,
+      "Phone: " + phone,
+      "Email: " + (email || "Not provided"),
+      "Scope: " + scope,
+      "",
+      "Project notes:",
+      message,
+      "",
+      "Thank you."
+    ].join("\n");
+
+    return "mailto:" + companyEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+
   if (contactForm) {
     contactForm.querySelectorAll("input, textarea, select").forEach(function (field) {
       field.addEventListener("blur", function () {
@@ -89,16 +121,21 @@
       }
 
       var button = contactForm.querySelector("button[type='submit']");
-      var original = button.getAttribute("data-submit-label") || button.textContent;
-      button.textContent = "Preparing...";
-      button.setAttribute("aria-busy", "true");
-      button.disabled = true;
+      var original = button ? button.getAttribute("data-submit-label") || button.textContent : "";
+      if (button) {
+        button.textContent = "Opening email...";
+        button.setAttribute("aria-busy", "true");
+        button.disabled = true;
+      }
+      if (formStatus) formStatus.textContent = "Opening a ready email message to info@alaryann.com.";
+      window.location.href = buildMailtoLink(contactForm);
 
       window.setTimeout(function () {
-        if (formStatus) formStatus.textContent = "Inquiry ready. Use WhatsApp or email to send it to AL ARYAN.";
-        button.textContent = original;
-        button.removeAttribute("aria-busy");
-        button.disabled = false;
+        if (button) {
+          button.textContent = original;
+          button.removeAttribute("aria-busy");
+          button.disabled = false;
+        }
       }, 700);
     });
   }

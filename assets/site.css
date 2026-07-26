@@ -1233,3 +1233,76 @@ dialog::backdrop {
     transition: none;
   }
 }
+
+:root {
+  --heading-gradient: linear-gradient(90deg, #173F25, #1E5730, #26703C, #2F8A49, #39A556);
+}
+
+.gradient-text,
+h1 span,
+.page-hero__copy h1 span,
+h2,
+.section-head h2,
+.contact-panel h2,
+.contact-panel h3,
+.card h3,
+.service-card h3,
+.detail-card h3,
+.quote-card h3 {
+  background: var(--heading-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-head {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.section-head h2 {
+  max-width: min(100%, 22ch);
+  margin-inline: auto;
+}
+
+.section-head .lede {
+  max-width: min(100%, 74ch);
+  margin-inline: auto;
+}
+
+.page-hero__copy {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.page-hero__copy h1 {
+  max-width: min(100%, 14ch);
+}
+
+.page-hero__copy .lede {
+  margin-inline: auto;
+}
+
+.project-content h3 {
+  background: none;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.quote-line {
+  color: #315a38;
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.58;
+}
+
+@media (max-width: 520px) {
+  body.contact-page .whatsapp-float {
+    display: none !important;
+  }
+}
