@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL ARYAN Industrial — Heavy Machinery &amp; Metal Fabrication</title>
+<meta property="og:title" content="AL ARYAN Industrial — Oil Tankers &amp; Lowbed Fabrication">
+<meta property="og:description" content="Heavy machinery, metal fabrication, and industrial equipment solutions in Riyadh, Saudi Arabia. Specialists in cylindrical oil tankers and lowbed trailers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alaryan-industrial.com">
+<meta name="description" content="AL ARYAN Industrial — heavy machinery, metal fabrication, oil tankers, and lowbed trailer fabrication in Riyadh, Saudi Arabia.">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='4' fill='%23d4622a'/&gt;&lt;text x='16' y='22' font-size='18' font-weight='bold' text-anchor='middle' fill='%230d0d0b' font-family='sans-serif'&gt;A&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #eef1f4;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --fg: #171a1f;
+  --muted: #5d6570;
+  --border: rgba(42, 48, 56, 0.16);
+  --accent: #d4622a;
+  --accent-hover: #b95021;
+  --accent-soft: rgba(212, 98, 42, 0.16);
+  --glass-line: rgba(255, 255, 255, 0.74);
+  --shadow: 0 20px 48px rgba(39, 45, 52, 0.14);
+  --font-display: 'Barlow Condensed', 'Helvetica Neue', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --container: 1200px;
+  --gap: 24px;
+  --radius: 4px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--fg);
+  background:
+    linear-gradient(rgba(238, 241, 244, 0.88), rgba(238, 241, 244, 0.94)),
+    url('assets/hero-oil-tankers.jpg') center/cover fixed no-repeat,
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- containers ---- */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gap); }
+
+/* ---- typography ---- */
+h1, h2, h3, h4, .h {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+h1, .h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+h2, .h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  letter-spacing: 0;
+}
+h3, .h3 {
+  font-size: clamp(20px, 2.2vw, 26px);
+  letter-spacing: 0;
+}
+h4, .h4 {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.body-lg { font-size: 18px; line-height: 1.55; }
+.body-sm { font-size: 14px; color: var(--muted); letter-spacing: 0.015em; }
+.caption { font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+/* ---- buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 0 var(--glass-line), 0 12px 24px rgba(39, 45, 52, 0.12);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #e4773a 0%, var(--accent) 48%, #b84d1d 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 0 14px 30px rgba(212, 98, 42, 0.28);
+}
+.btn-primary:hover { background: linear-gradient(135deg, #f08343 0%, var(--accent-hover) 100%); }
+.btn-primary:active { transform: scale(0.97); }
+.btn:focus-visible, .nav-links a:focus-visible, .mobile-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.btn-outline {
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px) saturate(1.2);
+}
+.btn-outline:hover { background: rgba(255, 255, 255, 0.86); border-color: rgba(23, 26, 31, 0.36); }
+
+/* ---- header ---- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(1.35);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(39, 45, 52, 0.1);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--fg);
+}
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--fg); }
+.nav-links a.active { color: var(--accent); }
+
+/* ---- hero ---- */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(238, 241, 244, 0.98) 0%, rgba(238, 241, 244, 0.82) 46%, rgba(238, 241, 244, 0.28) 100%),
+    url('assets/hero-oil-tankers.jpg') center/cover no-repeat;
+  filter: saturate(0.95) contrast(1.05);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 76% 22%, rgba(255, 255, 255, 0.46), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(205, 211, 218, 0.28));
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 120px 0 80px;
+}
+.hero h1 {
+  margin-bottom: 20px;
+  max-width: 14ch;
+}
+.hero p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 55ch;
+  margin-bottom: 40px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ---- sections ---- */
+.section { padding: 100px 0; }
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+.section-header p {
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+/* ---- about ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-image {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: var(--surface);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.about-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.26), transparent 42%);
+  pointer-events: none;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-top: 48px;
+}
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--fg);
+}
+.stat-label {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ---- services ---- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: transparent;
+}
+.service-card {
+  background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(1.2);
+  overflow: hidden;
+  padding: 48px 36px;
+  position: relative;
+}
+.service-card::before,
+.client-card::before,
+.testimonial-card::before,
+.contact-info::before,
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 42%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent);
+  pointer-events: none;
+}
+.service-card .h3 { margin-bottom: 12px; }
+.service-card p { color: var(--muted); font-size: 14px; }
+.service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 24px 52px rgba(39, 45, 52, 0.18); }
+.service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-icon svg { width: 100%; height: 100%; stroke: var(--muted); fill: none; stroke-width: 1.6; }
+
+/* ---- projects ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: transparent;
+}
+.project-card {
+  position: relative;
+  background: var(--surface);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.project-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9) saturate(1.03);
+  transition: filter 0.4s, transform 0.4s;
+}
+.project-card:hover img {
+  filter: brightness(0.72) saturate(1.08);
+  transform: scale(1.04);
+}
+.project-info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 24px 28px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(14, 18, 22, 0.9));
+}
+.project-info h3 { font-size: 20px; }
+.project-info p { font-size: 13px; color: rgba(255, 255, 255, 0.78); margin-top: 4px; }
+.project-placeholder {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px dashed var(--border);
+}
+.project-placeholder svg { width: 32px; height: 32px; stroke: var(--muted); stroke-width: 1.5; fill: none; }
+
+/* ---- clients ---- */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  background: transparent;
+}
+.client-card {
+  position: relative;
+  background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(1.2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  min-height: 120px;
+}
+.client-card span {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+/* ---- contact ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+.contact-info h3 { margin-bottom: 16px; }
+.contact-info p { color: var(--muted); margin-bottom: 8px; }
+.contact-info,
+.contact-form {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(1.2);
+  padding: 32px;
+}
+.contact-info .contact-detail {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.contact-detail svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 1.6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--fg);
+  outline: none;
+  box-shadow: inset 0 1px 0 var(--glass-line);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), inset 0 1px 0 var(--glass-line); }
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] { border-color: #c0392b; }
+.form-error { font-size: 12px; color: #c0392b; letter-spacing: 0.02em; display: none; margin-top: 4px; }
+.form-group input[aria-invalid="true"] ~ .form-error,
+.form-group textarea[aria-invalid="true"] ~ .form-error { display: block; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+/* ---- footer ---- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 32px;
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(16px) saturate(1.2);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand .logo { font-size: 18px; }
+.footer-brand p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 32ch;
+}
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--fg); }
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---- testimonials ---- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(145deg, var(--surface-strong), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px) saturate(1.2);
+  overflow: hidden;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonial-quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fg);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.testimonial-quote::before { content: '\201C'; color: var(--accent); font-size: 28px; line-height: 0; vertical-align: -6px; margin-right: 4px; }
+.testimonial-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.testimonial-company {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ---- scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .service-card { transition: none; }
+  .service-card:hover { transform: none; }
+  .whatsapp-btn { transition: none; }
+  .whatsapp-btn:hover { transform: none; }
+}
+
+/* ---- WhatsApp floating button ---- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+.whatsapp-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* ---- mobile ---- */
+.mobile-toggle { display: none; flex-direction: column; gap: 4px; cursor: pointer; background: none; border: none; padding: 4px; }
+.mobile-toggle span { width: 22px; height: 2px; background: var(--fg); transition: 0.2s; }
+
+@media (max-width: 768px) {
+  .mobile-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px) saturate(1.2);
+    flex-direction: column;
+    gap: 0;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 0; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+  .services-grid,
+  .projects-grid { grid-template-columns: 1fr; }
+  .client-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero h1 { max-width: 100%; }
+  .section { padding: 60px 0; }
+  .about-image { height: 300px; }
+  body { background-attachment: scroll; }
+}
+
+@media (max-width: 480px) {
+  .client-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- header -->
+<header class="site-header" data-od-id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo"><img src="لقطة-شاشة-2026-07-20-211819.png" alt="AL ARYAN Industrial logo" style="height:36px;width:auto;display:block;"></a>
+    <button class="mobile-toggle" data-od-id="mobile-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" data-od-id="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero" data-od-id="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">CYLINDRICAL TANKERS &amp; LOWBEDS</p>
+    <h1>Engineering precision since 1998</h1>
+    <p>AL ARYAN Industrial delivers heavy machinery, structural steel fabrication, and industrial equipment solutions across the Middle East — built to withstand the toughest conditions.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View our projects</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- about -->
+<section class="section reveal" id="about" data-od-id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">About us</p>
+        <h2>Forged in experience,<br>built to last</h2>
+        <p class="body-lg" style="margin-top:16px;color:var(--muted);">
+          For over 25 years, AL ARYAN Industrial has been a trusted partner in heavy industry — from large-scale structural steel projects to precision metal fabrication and industrial equipment supply.
+        </p>
+        <p style="margin-top:12px;color:var(--muted);">
+          Our team of 50+ engineers, fabricators, and technicians operates from a 50,000 sqm facility equipped with CNC machinery and full testing labs. We serve oil &amp; gas, construction, mining, and manufacturing sectors across the region.
+        </p>
+        <div class="about-stats">
+          <div>
+            <div class="stat-value" data-target="50">50+</div>
+            <div class="stat-label">Skilled workforce</div>
+          </div>
+          <div>
+            <div class="stat-value" data-target="50">50K</div>
+            <div class="stat-label">Sqm facility</div>
+          </div>
+          <div>
+            <div class="stat-value" data-target="27">27</div>
+            <div class="stat-label">Years in operation</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="WhatsApp-Image-2026-07-19-at-22.52.00.jpeg" alt="AL ARYAN Industrial lowbed trailer" data-od-id="about-image" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section class="section reveal" id="services" data-od-id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">What we do</p>
+      <h2>Capabilities</h2>
+      <p>End-to-end industrial services from concept to completion — backed by ISO-certified processes and decades of field experience.</p>
+    </div>
+  </div>
+  <div class="container" style="max-width:calc(var(--container) + 2px);padding:0;">
+    <div class="services-grid">
+      <div class="service-card" data-od-id="service-structural">
+<div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3z"></path><path d="M3 12h18"></path><path d="M12 3v18"></path></svg>
+        </div>
+        <h3 class="h3">Structural steel</h3>
+        <p>Design, fabrication, and erection of structural steel frameworks for commercial, industrial, and infrastructure projects.</p>
+      </div>
+      <div class="service-card" data-od-id="service-metal">
+<div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+        </div>
+        <h3 class="h3">Metal fabrication</h3>
+        <p>Precision sheet metal, plate work, welding, and custom fabrication using CNC laser cutting and bending.</p>
+      </div>
+      <div class="service-card" data-od-id="service-machinery">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4"></path><path d="M12 19v4"></path><path d="M1 12h4"></path><path d="M19 12h4"></path></svg>
+        </div>
+        <h3 class="h3">Industrial equipment</h3>
+        <p>Supply, installation, and maintenance of heavy machinery, conveyor systems, and production line equipment.</p>
+      </div>
+      <div class="service-card" data-od-id="service-piping">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"></path><circle cx="12" cy="12" r="8"></circle></svg>
+        </div>
+        <h3 class="h3">Piping &amp; pressure vessels</h3>
+        <p>ASME-certified fabrication of piping systems, pressure vessels, storage tanks, and heat exchangers for process industries.</p>
+      </div>
+      <div class="service-card" data-od-id="service-maintenance">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        </div>
+        <h3 class="h3">Maintenance &amp; repair</h3>
+        <p>On-site and in-house maintenance, refurbishment, and emergency repair services for industrial plant equipment.</p>
+      </div>
+      <div class="service-card" data-od-id="service-consulting">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+        </div>
+        <h3 class="h3">Engineering consulting</h3>
+        <p>Feasibility studies, structural analysis, value engineering, and project management from concept through commissioning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- projects -->
+<section class="section reveal" id="projects" data-od-id="projects">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Portfolio</p>
+      <h2>Oil tankers &amp; lowbed fabrication</h2>
+      <p>Specialized fabrication of cylindrical oil tankers, storage vessels, and heavy-duty lowbed trailers for the Saudi and GCC markets.</p>
+    </div>
+  </div>
+  <div class="container" style="max-width:calc(var(--container) + 2px);padding:0;">
+    <div class="projects-grid">
+      <div class="project-card" data-od-id="project-tanker-1">
+        <img src="WhatsApp-Image-2026-07-19-at-22.52.00-_1_.jpeg" alt="Oil tanker fabrication">
+        <div class="project-info">
+          <h3>Jubail Oil Tanker Fleet</h3>
+          <p>40,000-litre cylindrical tankers — Saudi Arabia</p>
+        </div>
+      </div>
+      <div class="project-card" data-od-id="project-lowbed-1">
+        <img src="64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg" alt="Lowbed trailer fabrication" loading="lazy">
+        <div class="project-info">
+          <h3>Dammam Lowbed Trailers</h3>
+          <p>60-ton heavy-duty lowbed trailers — 12 units</p>
+        </div>
+      </div>
+      <div class="project-card" data-od-id="project-tanker-2">
+        <img src="WhatsApp-Image-2026-07-19-at-22.52.01.jpeg" alt="Oil storage tank fabrication" loading="lazy">
+        <div class="project-info">
+          <h3>standing cylinderical tanks
+</h3>
+          <p>250,000-litre diesel storage vessels — 8 units</p>
+        </div>
+      </div>
+      <div class="project-card" data-od-id="project-lowbed-2">
+        <img src="a4ae965d-ab94-4f30-8ace-76d23ea0b3e4.jpg" alt="Heavy machinery fabrication" loading="lazy">
+        <div class="project-info">
+          <h3>Yanbu Lowbed Fleet</h3>
+          <p>100-ton extendable lowbed trailers — 6 units</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- clients -->
+<section class="section reveal" id="clients" data-od-id="clients">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Trusted by</p>
+      <h2>Clients &amp; partners</h2>
+      <p>We work with leading contractors, EPC firms, and government agencies across the region.</p>
+    </div>
+  </div>
+  <div class="container" style="max-width:calc(var(--container) + 2px);padding:0;">
+    <div class="client-grid">
+      <div class="client-card" data-od-id="client-1"><img src="WhatsApp-Image-2026-07-19-at-22.50.55-_1_-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-2"><img src="WhatsApp-Image-2026-07-19-at-22.50.56-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-3"><img src="WhatsApp-Image-2026-07-19-at-22.50.57-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-4"><img src="WhatsApp-Image-2026-07-19-at-22.50.59-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-5"><img src="WhatsApp-Image-2026-07-19-at-22.51.09-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-6"><img src="WhatsApp-Image-2026-07-19-at-22.51.00-_1_-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-7"><img src="WhatsApp-Image-2026-07-19-at-22.51.07-_1_-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+      <div class="client-card" data-od-id="client-8"><img src="WhatsApp-Image-2026-07-19-at-22.51.03-1.jpeg" alt="Client logo" style="max-width:80%;max-height:60px;object-fit:contain;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonials -->
+<section class="section reveal" id="testimonials" data-od-id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Testimonials</p>
+      <h2>What our clients say</h2>
+      <p>Trusted by leading EPC contractors and industrial operators across the GCC.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-od-id="testimonial-1">
+        <div class="testimonial-quote">"AL ARYAN delivered 40 cylindrical tankers ahead of schedule. The quality of welding and surface finish exceeded our spec. We've placed three repeat orders since."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Project Procurement Manager</div>
+          <div class="testimonial-company">Major Saudi EPC Contractor</div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-od-id="testimonial-2">
+        <div class="testimonial-quote">"Their lowbed trailer fabrication is among the best we've seen in the region. Robust design, proper load distribution, and excellent after-sales support."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Fleet Operations Director</div>
+          <div class="testimonial-company">GCC Heavy Transport Group</div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-od-id="testimonial-3">
+        <div class="testimonial-quote">"We partnered with AL ARYAN on a critical refinery project. Their engineering team's responsiveness and on-site support made a tight deadline achievable."</div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Senior Project Engineer</div>
+          <div class="testimonial-company">International Oil &amp; Gas Firm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="section reveal" id="contact" data-od-id="contact">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact us</h2>
+      <p>Ready to discuss your next project? Reach out to our team for a consultation or quote.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>AL ARYAN Industrial</h3>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <p style="font-weight:500;">Head office</p>
+            <p>Al Sulay,<br>Riyadh, Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <div>
+            <p style="font-weight:500;">Phone</p>
+            <p>+966 50 243 3395</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <div>
+            <p style="font-weight:500;">Email</p>
+            <p>info@alaryan-industrial.com</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" data-od-id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required="" aria-describedby="name-error">
+            <span class="form-error" id="name-error" role="alert">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required="" aria-describedby="email-error">
+            <span class="form-error" id="email-error" role="alert">Please enter a valid email address.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Project inquiry">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us about your project requirements..." required="" aria-describedby="message-error"></textarea>
+          <span class="form-error" id="message-error" role="alert">Please enter a message.</span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="site-footer" data-od-id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><img src="64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg" alt="AL ARYAN Industrial logo" style="height:36px;width:auto;display:block;"></a>
+        <p>Heavy machinery, metal fabrication, and industrial equipment solutions — serving the Middle East since 1998.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Structural steel</a></li>
+          <li><a href="#services">Metal fabrication</a></li>
+          <li><a href="#services">Industrial equipment</a></li>
+          <li><a href="#services">Engineering consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+966502433395">+966 50 243 3395</a></li>
+          <li><a href="mailto:info@alaryan-industrial.com">Email us</a></li>
+          <li><a href="#contact">Get directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AL ARYAN Industrial. All rights reserved.</span>
+      <span>Built for the toughest conditions.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/966502433395" target="_blank" rel="noopener" class="whatsapp-btn" data-od-id="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+  </a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.querySelector('[data-od-id="mobile-toggle"]');
+  var nav = document.querySelector('[data-od-id="nav"]');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { nav.classList.remove('open'); });
+    });
+    document.addEventListener('click', function(e) {
+      if (nav.classList.contains('open') && !toggle.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  }
+
+  var sections = document.querySelectorAll('[data-od-id].section');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var navObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        var id = entry.target.getAttribute('id');
+        if (id) {
+          var link = document.querySelector('.nav-links a[href="#' + id + '"]');
+          if (link) link.classList.add('active');
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(function(s) { navObserver.observe(s); });
+
+  var counted = false;
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting && !counted) {
+        counted = true;
+        countObserver.disconnect();
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelectorAll('.stat-value[data-target]').forEach(function(el) {
+            var target = parseInt(el.getAttribute('data-target'), 10);
+            var suffix = el.textContent.replace(/[0-9]/g, '');
+            var duration = 1200;
+            var start = performance.now();
+            function tick(now) {
+              var p = Math.min((now - start) / duration, 1);
+              var v = Math.round(p * target);
+              el.textContent = v + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          });
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  countObserver.observe(document.querySelector('#about'));
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  var form = document.querySelector('[data-od-id="contact-form"]');
+  if (form) {
+    function validateField(input) {
+      var error = document.getElementById(input.id + '-error');
+      if (!error) return true;
+      if (input.validity.valid) {
+        input.setAttribute('aria-invalid', 'false');
+        return true;
+      } else {
+        input.setAttribute('aria-invalid', 'true');
+        return false;
+      }
+    }
+    form.querySelectorAll('input, textarea').forEach(function(input) {
+      input.addEventListener('blur', function() { validateField(input); });
+      input.addEventListener('input', function() { if (input.getAttribute('aria-invalid') === 'true') validateField(input); });
+    });
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var valid = true;
+      form.querySelectorAll('[required]').forEach(function(input) {
+        if (!validateField(input)) valid = false;
+      });
+      if (!valid) return;
+      var btn = form.querySelector('.btn-primary');
+      var orig = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      setTimeout(function() {
+        btn.textContent = 'Message sent ✓';
+        btn.style.background = '#17a34a';
+        setTimeout(function() {
+          btn.textContent = orig;
+          btn.disabled = false;
+          btn.style.background = '';
+          form.reset();
+          form.querySelectorAll('[aria-invalid]').forEach(function(el) { el.setAttribute('aria-invalid', 'false'); });
+        }, 3000);
+      }, 1200);
+    });
+  }
+});
+</script>
+
+</body></html>

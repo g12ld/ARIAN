@@ -1,0 +1,281 @@
+{
+  "schema": "open-design.design-manifest.v1",
+  "title": "69b41ca7-0492-4dee-9d5b-fb379a6a3d5e",
+  "entryFile": "al-aryan-industrial.html",
+  "sourceFiles": {
+    "all": [
+      "64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg",
+      "a4ae965d-ab94-4f30-8ace-76d23ea0b3e4.jpg",
+      "al-aryan-industrial.html",
+      "assets/about-lowbed.jpg",
+      "assets/hero-industrial.jpg",
+      "assets/hero-oil-tankers.jpg",
+      "assets/project-1.jpg",
+      "assets/project-lowbed.jpg",
+      "assets/project-machinery.jpg",
+      "assets/project-tanks.jpg",
+      "assets/team.jpg",
+      "sketch-2026-07-19T19-26-27.sketch.json",
+      "WhatsApp-Image-2026-07-19-at-22.50.54-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.54.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.57-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.57.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.58-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.58.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.01.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.02-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.02.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.03-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.03.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.04-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.04.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.06-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.06.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.09-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.09.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.01.jpeg",
+      "لقطة-شاشة-2026-07-20-211819.png"
+    ],
+    "html": [
+      "al-aryan-industrial.html"
+    ],
+    "css": [],
+    "scriptsAndComponents": [],
+    "assets": [
+      "64f6a6f9-0e8e-4431-9834-4d560de0347d.jpg",
+      "a4ae965d-ab94-4f30-8ace-76d23ea0b3e4.jpg",
+      "assets/about-lowbed.jpg",
+      "assets/hero-industrial.jpg",
+      "assets/hero-oil-tankers.jpg",
+      "assets/project-1.jpg",
+      "assets/project-lowbed.jpg",
+      "assets/project-machinery.jpg",
+      "assets/project-tanks.jpg",
+      "assets/team.jpg",
+      "sketch-2026-07-19T19-26-27.sketch.json",
+      "WhatsApp-Image-2026-07-19-at-22.50.54-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.54.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.55.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.56.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.57-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.57.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.58-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.58.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.50.59.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.00.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.01.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.02-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.02.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.03-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.03.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.04-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.04.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.05.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.06-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.06.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.07.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08-_2_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.08.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.09-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.51.09.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00-_1_-1.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00-_1_.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.00.jpeg",
+      "WhatsApp-Image-2026-07-19-at-22.52.01.jpeg",
+      "لقطة-شاشة-2026-07-20-211819.png"
+    ]
+  },
+  "screens": [
+    {
+      "file": "al-aryan-industrial.html",
+      "role": "screen",
+      "implementationNote": "Preserve visual hierarchy, responsive behavior, and interactive states from this screen."
+    }
+  ],
+  "screenFilePolicy": {
+    "mode": "screen-file-first",
+    "entryFileRole": "primary-screen",
+    "rules": [
+      "Each distinct user-facing screen or surface must be delivered and implemented as its own file/route.",
+      "If a landing page is present or requested, keep it in landing.html and do not merge it into the product app screen.",
+      "When multiple HTML screens exist, index.html is a launcher/overview only; it must not be treated as the combined final UI.",
+      "Keep product app screens, landing pages, platform screens, and OS widget surfaces separate in production code."
+    ]
+  },
+  "appModules": [
+    "Identify domain-specific in-app modules from the exported UI; do not reduce them to generic cards.",
+    "For each major module, implement purpose, default/loading/empty/error/success states, and responsive behavior.",
+    "Keep app modules separate from OS home-screen widgets in the production component model."
+  ],
+  "osWidgets": [
+    "If the export includes home-screen, lock-screen, Live Activity, tablet glance, or Android widget surfaces, implement them as platform quick-access surfaces outside the app UI.",
+    "If none are present, do not invent OS widgets unless the product requirements request them."
+  ],
+  "landingPage": {
+    "detection": "Inspect files and screen names for a marketing/landing page surface. If present, keep it separate from product app screens.",
+    "requiredSections": [
+      "hero",
+      "value props",
+      "product proof/screenshots",
+      "feature proof",
+      "CTA"
+    ]
+  },
+  "tokens": {
+    "source": [
+      "al-aryan-industrial.html"
+    ],
+    "required": [
+      "background",
+      "surface",
+      "foreground",
+      "muted text",
+      "border",
+      "accent",
+      "radius",
+      "shadow",
+      "spacing",
+      "type scale",
+      "motion"
+    ],
+    "note": "Extract/freeze tokens before framework implementation so coding tools do not substitute default theme colors or typography."
+  },
+  "interactions": {
+    "source": [
+      "al-aryan-industrial.html"
+    ],
+    "requiredStates": [
+      "default",
+      "hover",
+      "focus",
+      "active",
+      "disabled",
+      "loading",
+      "empty",
+      "error",
+      "success"
+    ],
+    "requiredBehaviors": [
+      "forms/validation where present",
+      "tabs/filters where present",
+      "dialogs/sheets/drawers where present",
+      "copy/generate/share actions where present",
+      "player or quick controls where present"
+    ],
+    "note": "If the prototype is static, derive missing behavior from visible controls and document it before coding."
+  },
+  "responsiveViewports": [
+    {
+      "name": "mobile-compact",
+      "width": 360,
+      "height": 800,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "mobile-standard",
+      "width": 390,
+      "height": 844,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "mobile-large",
+      "width": 430,
+      "height": 932,
+      "category": "mobile",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "foldable-small-tablet",
+      "width": 600,
+      "height": 960,
+      "category": "foldable-tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "tablet-portrait",
+      "width": 820,
+      "height": 1180,
+      "category": "tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "tablet-landscape",
+      "width": 1024,
+      "height": 768,
+      "category": "tablet",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "laptop",
+      "width": 1366,
+      "height": 768,
+      "category": "desktop",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "category": "desktop",
+      "mustAvoidHorizontalScroll": true
+    },
+    {
+      "name": "wide",
+      "width": 1920,
+      "height": 1080,
+      "category": "wide",
+      "mustAvoidHorizontalScroll": true
+    }
+  ],
+  "implementationChecklist": [
+    "Open entryFile first and map screens, modules, tokens, and interactions.",
+    "Extract tokens before writing framework components.",
+    "Implement app-specific modules with real states instead of generic card grids.",
+    "Preserve or rebuild JS interactions for meaningful UX actions.",
+    "Validate screenshots at desktop/tablet/mobile viewports with no horizontal overflow.",
+    "Keep landing pages, in-app modules, and OS widgets as separate implementation surfaces."
+  ]
+}
