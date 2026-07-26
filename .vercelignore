@@ -10,6 +10,7 @@ sketch-*.json
 
 # Keep only the generated Open Graph PNG; the page itself uses generated WebP files.
 !assets/generated/hero-fabrication-workshop.png
+!assets/brand/logo-al-aryan.png
 
 # Local tooling and caches
 .git

@@ -126,6 +126,7 @@
     var max = document.documentElement.scrollHeight - window.innerHeight;
     var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
     if (progress) progress.style.width = pct + "%";
+    document.documentElement.style.setProperty("--scroll-shift", (window.scrollY * -0.035) + "px");
   }
 
   updateProgress();
