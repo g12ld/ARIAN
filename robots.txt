@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.alaryann.com/sitemap.xml
+Sitemap: https://alaryann.com/sitemap.xml
