@@ -81,9 +81,9 @@
     var email = getFormValue(form, "email");
     var scope = getFormValue(form, "scope");
     var message = getFormValue(form, "message");
-    var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
+    var subject = "Aryan Industry inquiry - " + (scope || "Project requirement");
     var body = [
-      "Hello AL ARYAN team,",
+      "Hello Aryan Industry team,",
       "",
       "Please review this project inquiry:",
       "",

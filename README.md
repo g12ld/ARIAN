@@ -1,6 +1,6 @@
-# AL ARYAN Industrial Website
+# Aryan Industry Website
 
-Static premium landing page for AL ARYAN Industrial.
+Static premium multi-page website for Aryan Industry.
 
 ## Vercel deployment
 
@@ -14,11 +14,13 @@ Static premium landing page for AL ARYAN Industrial.
 ```text
 index.html
 al-aryan-industrial.html
+sitemap.xml
+robots.txt
 assets/generated/
 vercel.json
 .vercelignore
 ```
 
-`index.html` is the main site. `al-aryan-industrial.html` is kept as a redirect for older links.
+`index.html` is the main site. `al-aryan-industrial.html` is kept as a redirect for older links. `sitemap.xml` and `robots.txt` expose the clean Vercel URLs for search engines.
 
 The live page uses generated WebP images from `assets/generated/`. The PNG source assets are retained locally and in Git for future editing, while `.vercelignore` keeps unused legacy images out of Vercel deployments.
