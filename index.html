@@ -1900,6 +1900,22 @@
         if (img.complete) markLoaded();
         else img.addEventListener("load", markLoaded, { once: true });
       });
+
+      var loader = document.getElementById("page-loader");
+      if (loader) {
+        var loaderDone = false;
+        function hideLoader() {
+          if (loaderDone) return;
+          loaderDone = true;
+          loader.classList.add("is-hidden");
+        }
+        if (document.readyState === "complete") {
+          setTimeout(hideLoader, 450);
+        } else {
+          window.addEventListener("load", function () { setTimeout(hideLoader, 450); });
+        }
+        setTimeout(hideLoader, 1800);
+      }
     })();
   </script>
 </body>
