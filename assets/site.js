@@ -179,3 +179,28 @@
     else img.addEventListener("load", markLoaded, { once: true });
   });
 })();
+
+(function () {
+  var loader = document.getElementById("page-loader");
+  if (!loader) return;
+
+  var boot = Date.now();
+  var done = false;
+
+  function finish() {
+    if (done) return;
+    done = true;
+    var elapsed = Date.now() - boot;
+    setTimeout(function () {
+      loader.classList.add("is-hidden");
+    }, Math.max(0, 450 - elapsed));
+  }
+
+  if (document.readyState === "complete") {
+    finish();
+  } else {
+    window.addEventListener("load", finish);
+  }
+
+  setTimeout(finish, 2500);
+})();
