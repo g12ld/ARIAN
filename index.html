@@ -227,7 +227,7 @@
 
     h1, h2, h3 {
       letter-spacing: 0;
-      line-height: 1;
+      line-height: 1.18;
       text-wrap: balance;
     }
     h1 {
@@ -656,8 +656,13 @@
       bottom: var(--space-4);
       z-index: 3;
       max-width: 320px;
-      color: var(--color-lime);
+      color: #fff;
       font-weight: 700;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgb(var(--lime-rgb) / 0.5);
+      border-radius: 6px;
+      background: rgb(var(--black-rgb) / 0.55);
+      backdrop-filter: blur(4px);
     }
 
     @media (min-width: 920px) {
@@ -1336,7 +1341,6 @@
           <h2 id="about-title">Built around industrial uptime.</h2>
           <p class="lede">Aryan Industry supports oil and gas, construction, transport, and manufacturing clients with fabrication work that has to perform in demanding field conditions.</p>
           <p>We combine experienced technicians, production discipline, and practical engineering review so clients can move from requirement to delivery with less uncertainty.</p>
-          <p class="quote-line">The brand should feel like a dependable workshop with a premium procurement desk: calm, precise, and hard to ignore.</p>
         </div>
         <figure class="media-frame is-loading reveal" data-delay="1">
           <img src="assets/generated/lowbed-tanker-yard.webp" width="1600" height="878" alt="Lowbed trailer carrying fabricated cylindrical tanks outside an industrial facility" loading="lazy" decoding="async">
@@ -1350,7 +1354,6 @@
         <div class="section-head reveal">
           <p class="eyebrow">Capability map</p>
           <h2 id="services-title">One system for heavy fabrication.</h2>
-          <p class="lede">Each service is positioned around the information buyers need first: scope, application, and the next action.</p>
         </div>
         <div class="bento-grid">
           <article class="card card-feature reveal">
@@ -1398,7 +1401,6 @@
         <div class="section-head centered reveal">
           <p class="eyebrow">Project journey</p>
           <h2 id="process-title">A cleaner route from inquiry to delivery.</h2>
-          <p class="lede">The flow reduces delays by making the next step obvious at every stage.</p>
         </div>
         <div class="process">
           <div class="process-step reveal">
@@ -1426,7 +1428,6 @@
         <div class="section-head reveal">
           <p class="eyebrow">Selected work</p>
           <h2 id="projects-title">Proof in metal, not promises.</h2>
-          <p class="lede">High-quality industrial imagery keeps the brand specific, focused, and inspection-ready.</p>
         </div>
         <div class="project-grid">
           <article class="project-card reveal">
@@ -1462,7 +1463,6 @@
         <div class="section-head reveal">
           <p class="eyebrow">Standards and fit</p>
           <h2 id="standards-title">Procurement details at a glance.</h2>
-          <p class="lede">A fast comparison table helps buyers qualify scope before they call.</p>
         </div>
         <div class="table-wrap reveal" tabindex="0" aria-label="Fabrication capability comparison">
           <table>
