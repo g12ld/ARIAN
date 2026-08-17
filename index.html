@@ -29,6 +29,13 @@
   <link rel="preload" as="image" href="assets/generated/hero-fabrication-workshop.webp" type="image/webp">
   <link rel="icon" href="assets/brand/logo-al-aryan.png">
   <style>
+    @font-face {
+      font-family: "VIP Hala Bold";
+      src: url("assets/fonts/vip-hala-bold.otf") format("opentype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
     *, *::before, *::after { box-sizing: border-box; }
     * { margin: 0; }
     html { scroll-behavior: smooth; }
@@ -77,6 +84,7 @@
       --font-body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
       --font-quote: "Playfair Display", Georgia, serif;
+      --font-display: "VIP Hala Bold", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --text-xs: 0.75rem;
       --text-sm: 0.875rem;
       --text-body: 1rem;
@@ -229,6 +237,7 @@
       letter-spacing: 0;
       line-height: 1.18;
       text-wrap: balance;
+      font-family: var(--font-display);
     }
     h1 {
       font-size: var(--text-5xl);
@@ -280,7 +289,8 @@
       gap: var(--space-3);
       min-height: 44px;
       text-decoration: none;
-      font-weight: 800;
+      font-family: var(--font-display);
+      font-weight: 700;
       color: var(--color-lime);
     }
     .brand-mark {
@@ -482,7 +492,7 @@
       max-width: 780px;
     }
     .hero h1 {
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: -0.01em;
     }
     .hero h1 span {
