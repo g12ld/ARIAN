@@ -1474,6 +1474,51 @@ h2,
 html[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 .mobile-panel .theme-toggle { width: 100%; justify-content: center; gap: var(--space-3); }
+.lang-toggle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* ===== Arabic / RTL ===== */
+html[lang="ar"] {
+  --font-body: "Tajawal", "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Tajawal", "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "Tajawal", ui-monospace, SFMono-Regular, monospace;
+}
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .metric-label,
+html[dir="rtl"] .tag,
+html[dir="rtl"] .table-label,
+html[dir="rtl"] th,
+html[dir="rtl"] .brand-text span:last-child {
+  letter-spacing: 0;
+}
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right;
+}
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+}
+html[dir="rtl"] .card .link-action svg,
+html[dir="rtl"] .hero-actions .btn svg,
+html[dir="rtl"] .page-actions .btn svg,
+html[dir="rtl"] .section-actions .btn svg,
+html[dir="rtl"] .product-card__actions .btn svg {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .hero-heading-kicker svg,
+html[dir="rtl"] .scroll-cue svg {
+  transform: scaleX(-1);
+}
 
 /* ===== Light theme ===== */
 html[data-theme="light"] {
