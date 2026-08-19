@@ -11,6 +11,9 @@
   <meta name="geo.region" content="SA-01">
   <meta name="geo.placename" content="Riyadh, Saudi Arabia">
   <link rel="canonical" href="https://alaryann.com/">
+  <link rel="alternate" hreflang="en" href="https://alaryann.com/">
+  <link rel="alternate" hreflang="ar" href="https://alaryann.com/index-ar.html">
+  <link rel="alternate" hreflang="x-default" href="https://alaryann.com/">
   <meta property="og:site_name" content="AL ARYAN">
   <meta property="og:title" content="AL ARYAN | Oil Tankers, Lowbeds, and Steel Fabrication">
   <meta property="og:description" content="Custom steel fabrication for oil tankers, lowbed trailers, storage tanks, pressure vessels, and industrial equipment across Saudi Arabia.">
@@ -1243,7 +1246,7 @@
         </span>
       </a>
       <nav aria-label="Primary navigation">
-        <ul class="nav-links">
+        <ul class="nav-links" data-nav>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li><li><a href="tankers.html">Tankers</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -1394,7 +1397,7 @@
               <h3>Lowbed trailers</h3>
               <p>Heavy-duty lowbed structures for industrial transport, built around load distribution, durability, serviceability, and road-ready detailing.</p>
             </div>
-            <button class="link-action" type="button" data-open-dialog data-service="Lowbed trailers">Request this scope <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+            <button class="link-action" type="button" data-open-dialog data-service="Lowbeds &amp; trailers">Request this scope <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           </article>
           <article class="card reveal">
             <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M4 10h16M8 20v-6h8v6"/></svg></span>
@@ -1666,8 +1669,11 @@
                 <label for="scope">Scope</label>
                 <select id="scope" name="scope">
                   <option>Cylindrical oil tankers</option>
-                  <option>Lowbed trailers</option>
+                  <option>Lowbeds &amp; trailers</option>
                   <option>Structural steel</option>
+                  <option>Concrete factory equipment</option>
+                  <option>Block factory equipment</option>
+                  <option>Petroleum tanks</option>
                   <option>Piping and vessels</option>
                   <option>Repair and retrofit</option>
                   <option>Engineering review</option>
@@ -1755,8 +1761,11 @@
             <label for="dialog-scope">Scope</label>
             <select id="dialog-scope" name="dialog-scope" data-dialog-scope>
               <option>Cylindrical oil tankers</option>
-              <option>Lowbed trailers</option>
+              <option>Lowbeds &amp; trailers</option>
               <option>Structural steel</option>
+              <option>Concrete factory equipment</option>
+              <option>Block factory equipment</option>
+              <option>Petroleum tanks</option>
               <option>Piping and vessels</option>
               <option>Repair and retrofit</option>
               <option>Engineering review</option>
@@ -1783,7 +1792,7 @@
     (function () {
       var menuButton = document.querySelector("[data-menu-button]");
       var mobilePanel = document.querySelector("[data-mobile-panel]");
-      var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-nav] a, [data-mobile-panel] a"));
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-nav] a, [data-mobile-panel] a, [data-mobile-panel] button"));
       var dialog = document.querySelector("[data-dialog]");
       var dialogScope = document.querySelector("[data-dialog-scope]");
       var progress = document.querySelector("[data-progress]");

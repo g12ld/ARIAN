@@ -81,9 +81,9 @@
     var email = getFormValue(form, "email");
     var scope = getFormValue(form, "scope");
     var message = getFormValue(form, "message");
-    var subject = "Aryan Industry inquiry - " + (scope || "Project requirement");
+    var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
     var body = [
-      "Hello Aryan Industry team,",
+      "Hello AL ARYAN team,",
       "",
       "Please review this project inquiry:",
       "",
@@ -177,6 +177,17 @@
     }
     if (img.complete) markLoaded();
     else img.addEventListener("load", markLoaded, { once: true });
+  });
+
+  document.querySelectorAll("[data-faq-toggle]").forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      var item = toggle.closest(".faq-item");
+      if (!item) return;
+      var isOpen = item.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      var panel = item.querySelector("[data-faq-panel]");
+      if (panel) panel.inert = !isOpen;
+    });
   });
 })();
 

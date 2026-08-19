@@ -428,7 +428,7 @@ label,
   position: absolute;
   inset: 0;
   z-index: -3;
-  background: var(--page-image, url("generated/hero-fabrication-workshop.webp")) center / cover no-repeat;
+  background: var(--page-image, url("assets/generated/hero-fabrication-workshop.webp")) center / cover no-repeat;
   filter: grayscale(0.3) saturate(0.42) contrast(1.04) brightness(0.86);
   transform: scale(1.02);
 }
@@ -780,6 +780,78 @@ select[aria-invalid="true"] {
 .form-note {
   color: var(--color-muted);
   font-size: var(--text-sm);
+}
+.faq {
+  display: grid;
+  gap: var(--space-3);
+}
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgb(var(--graphite-soft-rgb) / 0.62);
+  overflow: hidden;
+  transition: border-color var(--duration-fast) ease;
+}
+.faq-item.is-open {
+  border-color: var(--color-border-strong);
+}
+.faq-toggle {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: 0;
+  background: transparent;
+  color: var(--color-heading);
+  text-align: start;
+  cursor: pointer;
+  padding: var(--space-4) var(--space-5);
+  font-weight: 800;
+  font-size: var(--text-lg);
+}
+.faq-toggle:hover {
+  color: var(--color-lime);
+}
+.faq-toggle .faq-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-rust);
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  line-height: 1;
+  transition: transform var(--duration-normal) ease, color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+.faq-item.is-open .faq-toggle .faq-icon {
+  transform: rotate(45deg);
+  color: var(--color-lime);
+  border-color: var(--color-border-strong);
+}
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-normal) ease;
+}
+.faq-item.is-open .faq-answer {
+  grid-template-rows: 1fr;
+}
+.faq-answer > div {
+  overflow: hidden;
+}
+.faq-answer p {
+  max-width: 68ch;
+  padding: 0 var(--space-5) var(--space-5);
+}
+.faq-answer a {
+  color: var(--color-lime);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 .site-footer {
   padding-block: var(--space-16) var(--space-8);

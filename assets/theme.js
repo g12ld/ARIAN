@@ -11,8 +11,15 @@
   var theme = saved === "light" || saved === "dark" ? saved : (systemDark ? "dark" : "light");
   root.setAttribute("data-theme", theme);
 
+  var themeColor = document.querySelector('meta[name="theme-color"]');
+  function syncChrome(next) {
+    if (themeColor) themeColor.setAttribute("content", next === "light" ? "#FFFFFF" : "#2F3130");
+  }
+  syncChrome(theme);
+
   function apply(next) {
     root.setAttribute("data-theme", next);
+    syncChrome(next);
     try {
       localStorage.setItem(key, next);
     } catch (e) {
@@ -36,7 +43,9 @@
         current = null;
       }
       if (current !== "light" && current !== "dark") {
-        root.setAttribute("data-theme", event.matches ? "dark" : "light");
+        var next = event.matches ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        syncChrome(next);
       }
     };
     if (mq.addEventListener) mq.addEventListener("change", followSystem);

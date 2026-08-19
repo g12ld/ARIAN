@@ -1245,7 +1245,7 @@
         </span>
       </a>
       <nav aria-label="التنقل الأساسي">
-        <ul class="nav-links">
+        <ul class="nav-links" data-nav>
           <li><a href="about-ar.html">من نحن</a></li>
           <li><a href="services-ar.html">الخدمات</a></li><li><a href="tankers-ar.html">الصهاريج</a></li>
           <li><a href="projects-ar.html">المشاريع</a></li>
@@ -1398,7 +1398,7 @@
               <h3>المقطورات المنخفضة</h3>
               <p>هياكل لوبد ثقيلة للنقل الصناعي، مبنية على توزيع الأحمال والمتانة وسهولة الصيانة وتفاصيل جاهزة للطرق.</p>
             </div>
-            <button class="link-action" type="button" data-open-dialog data-service="Lowbed trailers">اطلب هذا النطاق <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+            <button class="link-action" type="button" data-open-dialog data-service="اللوبدات والمقطورات">اطلب هذا النطاق <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           </article>
           <article class="card reveal">
             <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M4 10h16M8 20v-6h8v6"/></svg></span>
@@ -1670,8 +1670,11 @@
                 <label for="scope">النطاق</label>
                 <select id="scope" name="scope">
                   <option>صهاريج النفط الأسطوانية</option>
-                  <option>المقطورات المنخفضة</option>
+                  <option>اللوبدات والمقطورات</option>
                   <option>الفولاذ الهيكلي</option>
+                  <option>معدات مصانع الخرسانة</option>
+                  <option>معدات مصانع البلوك</option>
+                  <option>خزانات النفط</option>
                   <option>الأنابيب والأوعية</option>
                   <option>الإصلاح وإعادة التأهيل</option>
                   <option>المراجعة الهندسية</option>
@@ -1759,8 +1762,11 @@
             <label for="dialog-scope">النطاق</label>
             <select id="dialog-scope" name="dialog-scope" data-dialog-scope>
               <option>صهاريج النفط الأسطوانية</option>
-              <option>المقطورات المنخفضة</option>
+              <option>اللوبدات والمقطورات</option>
               <option>الفولاذ الهيكلي</option>
+              <option>معدات مصانع الخرسانة</option>
+              <option>معدات مصانع البلوك</option>
+              <option>خزانات النفط</option>
               <option>الأنابيب والأوعية</option>
               <option>الإصلاح وإعادة التأهيل</option>
               <option>المراجعة الهندسية</option>
@@ -1787,7 +1793,7 @@
     (function () {
       var menuButton = document.querySelector("[data-menu-button]");
       var mobilePanel = document.querySelector("[data-mobile-panel]");
-      var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-nav] a, [data-mobile-panel] a"));
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-nav] a, [data-mobile-panel] a, [data-mobile-panel] button"));
       var dialog = document.querySelector("[data-dialog]");
       var dialogScope = document.querySelector("[data-dialog-scope]");
       var progress = document.querySelector("[data-progress]");
