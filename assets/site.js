@@ -215,3 +215,40 @@
 
   setTimeout(finish, 2500);
 })();
+
+(function () {
+  var search = document.getElementById("prodSearch");
+  var chips = document.getElementById("prodChips");
+  var noResults = document.getElementById("noResults");
+  if (!search || !chips) return;
+
+  var rows = document.querySelectorAll(".product-row[data-cat]");
+  var activeCat = "all";
+
+  function filterProducts() {
+    var q = search.value.toLowerCase().trim();
+    var visible = 0;
+    rows.forEach(function (row) {
+      var cat = row.getAttribute("data-cat") || "";
+      var name = (row.getAttribute("data-name") || "").toLowerCase();
+      var text = row.textContent.toLowerCase();
+      var catMatch = activeCat === "all" || cat === activeCat;
+      var textMatch = !q || name.indexOf(q) !== -1 || text.indexOf(q) !== -1;
+      var show = catMatch && textMatch;
+      row.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    if (noResults) noResults.style.display = visible === 0 ? "" : "none";
+  }
+
+  search.addEventListener("input", filterProducts);
+
+  chips.addEventListener("click", function (e) {
+    var btn = e.target.closest(".chip");
+    if (!btn) return;
+    chips.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("active"); });
+    btn.classList.add("active");
+    activeCat = btn.getAttribute("data-cat") || "all";
+    filterProducts();
+  });
+})();
