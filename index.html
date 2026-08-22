@@ -1680,7 +1680,7 @@
               <textarea id="message" name="message" required placeholder="Capacity, dimensions, material, quantity, site, or delivery target..." aria-describedby="message-error"></textarea>
               <span class="form-error" id="message-error" role="alert">Please add the project notes.</span>
             </div>
-            <p class="form-note">This form opens a ready email draft on your device. No information is sent to a server from this page.</p>
+            <p class="form-note">Your inquiry is sent directly to our team. We respond within 24 hours.</p>
             <div class="hero-actions">
               <button class="btn btn-accent" type="submit" data-submit-label="Send inquiry">Send inquiry</button>
               <a class="btn" href="https://wa.me/966502433395" target="_blank" rel="noopener">Open WhatsApp</a>
@@ -1777,7 +1777,7 @@
         </div>
         <div class="hero-actions">
           <a class="btn btn-accent" href="https://wa.me/966502433395" target="_blank" rel="noopener">Continue on WhatsApp</a>
-          <a class="btn" href="mailto:info@alaryann.com">Send by email</a>
+          <button class="btn" type="submit">Send by email</button>
         </div>
       </form>
     </div>
@@ -1836,6 +1836,34 @@
         });
       }
 
+      var dialogForm = document.querySelector("[data-dialog-form]");
+      if (dialogForm) {
+        dialogForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var data = new FormData(dialogForm);
+          data.append("access_key", "d5213683-34f5-4535-9aaf-b263a4ff6da0");
+          data.append("from_name", "AL ARYAN Website");
+
+          var btn = dialogForm.querySelector("button[type='submit']");
+          var orig = btn ? btn.textContent : "";
+          if (btn) { btn.textContent = "Sending..."; btn.disabled = true; }
+
+          fetch("https://api.web3forms.com/submit", { method: "POST", body: data })
+            .then(function (r) { return r.json(); })
+            .then(function (res) {
+              if (res.success) {
+                if (btn) btn.textContent = "Sent!";
+                dialogForm.reset();
+                setTimeout(function () { if (dialog) dialog.close(); }, 1500);
+              } else { throw new Error("fail"); }
+            })
+            .catch(function () {
+              if (btn) { btn.textContent = orig; btn.disabled = false; }
+              alert("Something went wrong. Please try again or use WhatsApp.");
+            });
+        });
+      }
+
       function validateField(field) {
         var valid = field.checkValidity();
         field.setAttribute("aria-invalid", String(!valid));
@@ -1847,31 +1875,16 @@
         return field ? String(field.value || "").trim() : "";
       }
 
-      function buildMailtoLink(form) {
-        var companyEmail = "info@alaryann.com";
-        var name = getFormValue(form, "name");
-        var phone = getFormValue(form, "phone");
-        var email = getFormValue(form, "email");
-        var scope = getFormValue(form, "scope");
-        var message = getFormValue(form, "message");
-        var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
-        var body = [
-          "Hello AL ARYAN team,",
-          "",
-          "Please review this project inquiry:",
-          "",
-          "Name: " + name,
-          "Phone: " + phone,
-          "Email: " + (email || "Not provided"),
-          "Scope: " + scope,
-          "",
-          "Project notes:",
-          message,
-          "",
-          "Thank you."
-        ].join("\n");
+      function submitToWeb3Forms(form) {
+        var data = new FormData(form);
+        data.append("access_key", "d5213683-34f5-4535-9aaf-b263a4ff6da0");
+        data.append("subject", "AL ARYAN inquiry - " + (getFormValue(form, "scope") || "Project requirement"));
+        data.append("from_name", "AL ARYAN Website");
 
-        return "mailto:" + companyEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        return fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: data
+        }).then(function (res) { return res.json(); });
       }
 
       if (contactForm) {
@@ -1894,19 +1907,35 @@
           var button = contactForm.querySelector("button[type='submit']");
           var original = button ? button.getAttribute("data-submit-label") || button.textContent : "";
           if (button) {
-            button.textContent = "Opening email...";
+            button.textContent = "Sending...";
             button.setAttribute("aria-busy", "true");
             button.disabled = true;
           }
-          if (formStatus) formStatus.textContent = "Opening a ready email message to info@alaryann.com.";
-          window.location.href = buildMailtoLink(contactForm);
-          window.setTimeout(function () {
+          if (formStatus) formStatus.textContent = "Sending your inquiry...";
+
+          submitToWeb3Forms(contactForm).then(function (res) {
+            if (res.success) {
+              if (formStatus) formStatus.textContent = "Inquiry sent successfully. We will respond within 24 hours.";
+              contactForm.reset();
+              if (button) {
+                button.textContent = "Sent!";
+                button.removeAttribute("aria-busy");
+                setTimeout(function () {
+                  button.textContent = original;
+                  button.disabled = false;
+                }, 3000);
+              }
+            } else {
+              throw new Error("Submission failed");
+            }
+          }).catch(function () {
+            if (formStatus) formStatus.textContent = "Something went wrong. Please try again or email us directly.";
             if (button) {
               button.textContent = original;
               button.removeAttribute("aria-busy");
               button.disabled = false;
             }
-          }, 700);
+          });
         });
       }
 

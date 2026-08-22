@@ -75,30 +75,16 @@
     return field ? String(field.value || "").trim() : "";
   }
 
-  function buildMailtoLink(form) {
-    var name = getFormValue(form, "name");
-    var phone = getFormValue(form, "phone");
-    var email = getFormValue(form, "email");
-    var scope = getFormValue(form, "scope");
-    var message = getFormValue(form, "message");
-    var subject = "AL ARYAN inquiry - " + (scope || "Project requirement");
-    var body = [
-      "Hello AL ARYAN team,",
-      "",
-      "Please review this project inquiry:",
-      "",
-      "Name: " + name,
-      "Phone: " + phone,
-      "Email: " + (email || "Not provided"),
-      "Scope: " + scope,
-      "",
-      "Project notes:",
-      message,
-      "",
-      "Thank you."
-    ].join("\n");
+  function submitToWeb3Forms(form) {
+    var data = new FormData(form);
+    data.append("access_key", "d5213683-34f5-4535-9aaf-b263a4ff6da0");
+    data.append("subject", "AL ARYAN inquiry - " + (getFormValue(form, "scope") || "Project requirement"));
+    data.append("from_name", "AL ARYAN Website");
 
-    return "mailto:" + companyEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    return fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data
+    }).then(function (res) { return res.json(); });
   }
 
   if (contactForm) {
@@ -123,20 +109,35 @@
       var button = contactForm.querySelector("button[type='submit']");
       var original = button ? button.getAttribute("data-submit-label") || button.textContent : "";
       if (button) {
-        button.textContent = "Opening email...";
+        button.textContent = "Sending...";
         button.setAttribute("aria-busy", "true");
         button.disabled = true;
       }
-      if (formStatus) formStatus.textContent = "Opening a ready email message to info@alaryann.com.";
-      window.location.href = buildMailtoLink(contactForm);
+      if (formStatus) formStatus.textContent = "Sending your inquiry...";
 
-      window.setTimeout(function () {
+      submitToWeb3Forms(contactForm).then(function (res) {
+        if (res.success) {
+          if (formStatus) formStatus.textContent = "Inquiry sent successfully. We will respond within 24 hours.";
+          contactForm.reset();
+          if (button) {
+            button.textContent = "Sent!";
+            button.removeAttribute("aria-busy");
+            setTimeout(function () {
+              button.textContent = original;
+              button.disabled = false;
+            }, 3000);
+          }
+        } else {
+          throw new Error("Submission failed");
+        }
+      }).catch(function () {
+        if (formStatus) formStatus.textContent = "Something went wrong. Please try again or email us directly.";
         if (button) {
           button.textContent = original;
           button.removeAttribute("aria-busy");
           button.disabled = false;
         }
-      }, 700);
+      });
     });
   }
 
