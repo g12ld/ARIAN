@@ -224,6 +224,47 @@
     }
     body { overflow: hidden; }
   </style>
+  <style>
+    .maintenance-banner {
+      position: fixed; top: 0; left: -100%; width: 200%; background: #ff0000; color: #ffffff;
+      font-weight: 900; font-size: clamp(0.75rem, 1.6vw, 1.1rem);
+      padding: 0.45rem 0; text-align: center; white-space: nowrap; z-index: 99999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      animation: marquee 18s linear infinite, bannerFlash 1s ease-in-out infinite alternate;
+      text-transform: uppercase; letter-spacing: 0.8px;
+    }
+    @keyframes marquee { 0% { left: -100%; } 100% { left: 0; } }
+    @keyframes bannerFlash { 0% { background: #ff0000; } 100% { background: #990000; } }
+    .maintenance-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 99998;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1rem; padding-top: 4.2rem;
+    }
+    .maintenance-content { color: #ffffff; text-align: center; max-width: 1000px; }
+    .maintenance-title { font-size: clamp(1.5rem, 4vw, 2.8rem); font-weight: 900; color: #ff0000; margin-bottom: 0.6rem; text-transform: uppercase; }
+    .maintenance-text { font-size: clamp(0.85rem, 1.8vw, 1.05rem); line-height: 1.6; margin-bottom: 0.6rem; }
+    .maintenance-highlight { color: #ff0000; font-weight: 900; }
+    .timer-container {
+      margin: 2rem 0 1.4rem;
+      padding: clamp(1.4rem, 3.5vw, 2.6rem) clamp(0.9rem, 3.5vw, 1.8rem);
+      border: 4px solid #ff0000;
+      border-radius: 1rem;
+      background: rgba(255,0,0,0.08);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 80px rgba(255,0,0,0.45), inset 0 0 60px rgba(255,0,0,0.08);
+    }
+    .countdown {
+      font-family: 'Courier New', monospace;
+      font-size: clamp(2.6rem, 7vw, 7rem);
+      font-weight: 900;
+      color: #ff0000;
+      letter-spacing: clamp(3px, 0.9vw, 10px);
+      text-shadow: 0 0 50px rgba(255,0,0,0.85);
+      line-height: 1;
+    }
+    .timer-label { margin-top: 0.9rem; font-size: clamp(0.8rem, 1.8vw, 1.2rem); text-transform: uppercase; letter-spacing: 1.6px; color: #ffffff; }
+    body { overflow: hidden; }
+  </style>
 </head>
 <body class="contact-page">
   <div class="loader" id="page-loader" aria-hidden="true"><img src="assets/logo.png" alt="AL ARYAN" class="loader-logo"></div>
