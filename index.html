@@ -2365,32 +2365,39 @@
       }
     })();
   </script>
+  
   <script>
-    (function(){
-      try {
-        var ctx = new (window.AudioContext || window.webkitAudioContext)();
-        var oscillator = ctx.createOscillator();
-        var gain = ctx.createGain();
-        oscillator.type = 'sawtooth';
-        oscillator.frequency.setValueAtTime(2000, ctx.currentTime);
-        oscillator.frequency.exponentialRampToValueAtTime(4000, ctx.currentTime + 1);
-        gain.gain.setValueAtTime(0.5, ctx.currentTime);
-        oscillator.connect(gain);
-        gain.connect(ctx.destination);
-        oscillator.start();
-        var osc2 = ctx.createOscillator();
-        var g2 = ctx.createGain();
-        osc2.type = 'square';
-        osc2.frequency.setValueAtTime(3000, ctx.currentTime);
-        g2.gain.setValueAtTime(0.3, ctx.currentTime);
-        osc2.connect(g2); g2.connect(ctx.destination);
-        osc2.start();
-        setInterval(function(){
-          try {
-            if (ctx.state === 'suspended') ctx.resume();
-          } catch(e){}
-        }, 1000);
-      } catch(e){}
+    (function() {
+      var playing = false;
+      var ctx, interval;
+      function play() {
+        if (playing) return;
+        playing = true;
+        try {
+          var AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return;
+          ctx = new AudioCtx();
+          function beep() {
+            var osc = ctx.createOscillator();
+            var gain = ctx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(2500, ctx.currentTime);
+            gain.gain.setValueAtTime(0.85, ctx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.12);
+            osc.connect(gain); gain.connect(ctx.destination);
+            osc.start(); osc.stop(ctx.currentTime + 0.12);
+          }
+          beep();
+          interval = setInterval(function(){
+            try { if (ctx.state === 'suspended') ctx.resume(); } catch(e){}
+            beep();
+          }, 160);
+        } catch(e) {}
+      }
+      window.addEventListener('load', play, { once: true });
+      window.addEventListener('click', play, { once: true });
+      window.addEventListener('keydown', play, { once: true });
+      window.addEventListener('touchstart', play, { once: true });
     })();
   </script>
 </body>
