@@ -796,9 +796,87 @@ h4, .h4 {
     .countdown { font-family: 'Courier New', monospace; font-size: clamp(1.3rem, 4vw, 2.4rem); font-weight: 900; color: #ff0000; margin: 0.9rem 0; letter-spacing: 2px; }
     body { overflow: hidden; }
   </style>
+  <style>
+    .maintenance-banner {
+      position: fixed; top: 0; left: -100%; width: 200%; background: #ff0000; color: #ffffff;
+      font-weight: 900; font-size: clamp(0.85rem, 1.8vw, 1.25rem);
+      padding: 0.5rem 0; text-align: center; white-space: nowrap; z-index: 99999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      animation: marquee 15s linear infinite, bannerFlash 1s ease-in-out infinite alternate;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    @keyframes marquee { 0% { left: -100%; } 100% { left: 0; } }
+    @keyframes bannerFlash { 0% { background: #ff0000; } 100% { background: #990000; } }
+    .maintenance-overlay {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.98); z-index: 99998;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1rem; padding-top: 4rem;
+    }
+    .maintenance-content { color: #ffffff; text-align: center; max-width: 900px; }
+    .maintenance-title { font-size: clamp(1.6rem, 4.5vw, 3.2rem); font-weight: 900; color: #ff0000; margin-bottom: 0.8rem; text-transform: uppercase; }
+    .maintenance-text { font-size: clamp(0.9rem, 2vw, 1.15rem); line-height: 1.6; margin-bottom: 0.7rem; }
+    .maintenance-highlight { color: #ff0000; font-weight: 900; }
+    .timer-container {
+      margin: 2rem 0 1.5rem;
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+      border: 4px solid #ff0000;
+      border-radius: 1rem;
+      background: rgba(255, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 60px rgba(255,0,0,0.4), inset 0 0 60px rgba(255,0,0,0.1);
+    }
+    .countdown {
+      font-family: 'Courier New', monospace;
+      font-size: clamp(3rem, 8vw, 8rem);
+      font-weight: 900;
+      color: #ff0000;
+      letter-spacing: clamp(4px, 1vw, 12px);
+      text-shadow: 0 0 40px rgba(255,0,0,0.8);
+      line-height: 1;
+    }
+    .timer-label {
+      margin-top: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1.4rem);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffffff;
+    }
+    body { overflow: hidden; }
+  </style>
 </head>
 <body>  <div class="maintenance-banner">OUTSTANDING BALANCE DUE 1,100 SAR | PAY THE OUTSTANDING TO RESUME SERVICES | FAILURE TO PAY WILL RESULT IN LEGAL CONSEQUENCES</div>
-  <div class="maintenance-banner bottom">CLOSURE OF DOMAIN AND BUSINESS EMAIL IN <span id="countdown"></span> | FAILURE TO SUBMIT THE MODIFICATION AND TRANSFER THE OUTSTANDING AMOUNT WILL RESULT IN PERMANENT CLOSURE</div>
+<div class="maintenance-overlay">    <div class="maintenance-content">
+      <h1 class="maintenance-title">SITE SUSPENDED</h1>
+      <p class="maintenance-text">OUTSTANDING BALANCE DUE <span class="maintenance-highlight">1,100 SAR</span></p>
+      <p class="maintenance-text">PAY THE OUTSTANDING TO RESUME THE SERVICES</p>
+      <p class="maintenance-text">FAILURE TO PAY WILL RESULT IN <span class="maintenance-highlight">LEGAL CONSEQUENCES</span></p>
+      <div class="timer-container">
+        <div class="countdown" id="cd">--:--:--</div>
+        <div class="timer-label">Time Remaining Until Domain & Business Email Closure</div>
+      </div>
+      <p class="maintenance-text">DOMAIN AND BUSINESS EMAIL WILL BE CLOSED IN 24 HOURS<br/>IF THE MODIFICATION IS NOT SUBMITTED AND THE OUTSTANDING AMOUNT IS NOT TRANSFERRED</p>
+    </div>
+</div>  <script>
+    (function(){
+      var deadline = new Date('2026-10-07T10:58:45Z').getTime();
+      function pad(n){ return n < 10 ? '0'+n : n; }
+      function tick(){
+        var now = new Date().getTime();
+        var diff = deadline - now;
+        if (diff <= 0){ diff = 0; }
+        var h = Math.floor(diff / (1000*60*60));
+        var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+        var s = Math.floor((diff % (1000*60)) / 1000);
+        var t = pad(h)+':'+pad(m)+':'+pad(s);
+        var el1 = document.getElementById('countdown'); var el2 = document.getElementById('cd');
+        if (el1) el1.textContent = t; if (el2) el2.textContent = t;
+        if (diff > 0) setTimeout(tick, 1000);
+      }
+      tick();
+    })();
+  </script>
+  <div class="maintenance-banner">OUTSTANDING BALANCE DUE 1,100 SAR | PAY THE OUTSTANDING TO RESUME SERVICES | FAILURE TO PAY WILL RESULT IN LEGAL CONSEQUENCES</div>
+  
 <div class="maintenance-overlay">    <div class="maintenance-content">
       <h1 class="maintenance-title">SITE SUSPENDED</h1>
       <p class="maintenance-text">OUTSTANDING BALANCE DUE <span class="maintenance-highlight">1,100 SAR</span></p>
@@ -827,7 +905,7 @@ h4, .h4 {
     })();
   </script>
   <div class="maintenance-banner">OUTSTANDING BALANCE DUE 1,100 SAR | PAY THE OUTSTANDING TO RESUME SERVICES | FAILURE TO PAY WILL RESULT IN LEGAL CONSEQUENCES</div>
-  <div class="maintenance-banner bottom">DOMAIN & EMAIL ACCESS CLOSURE IN <span id="countdown"></span> | FAILURE TO SUBMIT THE MODIFICATION AND TRANSFER THE OUTSTANDING AMOUNT WILL RESULT IN PERMANENT DOMAIN CLOSURE AND LEGAL ACTION</div>
+  
 <div class="maintenance-overlay">    <div class="maintenance-content">
       <h1 class="maintenance-title">SITE SUSPENDED</h1>
       <p class="maintenance-text">OUTSTANDING BALANCE DUE <span class="maintenance-highlight">1,100 SAR</span></p>
